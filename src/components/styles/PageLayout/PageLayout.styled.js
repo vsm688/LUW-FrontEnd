@@ -13,7 +13,7 @@ export const StyledMain = styled.main`
   display: flex;
   background-color: #b2e4fa;
   width: 100vw;
-  height: 100%;
+
   justify-content: center;
   align-items: center;
 `;
@@ -29,7 +29,8 @@ export const StyledContentPane = styled.div`
 export const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
-
+  height: 5vh;
+  align-items: center;
   @media (max-width: 768px) {
     position: fixed;
     padding: 10px 10px 0px 10px;

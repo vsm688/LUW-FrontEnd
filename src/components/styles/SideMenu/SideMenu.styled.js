@@ -7,7 +7,7 @@ export const StyledSideBar = styled.div`
     position: relative;
     width: auto;
     background-color: #43C0F6;
-    height: 100%;
+
     overflow: auto;
     justify-content:  ${( {isOpen}) => (isOpen ? 'space-between' : '')} ;
     p{

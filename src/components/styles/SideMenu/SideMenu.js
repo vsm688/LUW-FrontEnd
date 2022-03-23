@@ -171,9 +171,9 @@ const MenuItems = [
     icon: <InstructionsSVG />,
     pathstring: "/instructions",
   },
-  { text: "VIDEO TUTORIAL", icon: <VideoSVG />, pathstring: "/tutorial" },
-  { text: "MAKE PROJECT", icon: <MakeProjectSVG />, pathstring: "/makeproject" },
-  { text: "SUBMIT PROJECT", icon: <SubmitSVG />, pathstring: "/submitproject" },
+  { text: "VIDEO TUTORIAL", icon: <VideoSVG />, pathstring: "/students/tutorial" },
+  { text: "MAKE PROJECT", icon: <MakeProjectSVG />, pathstring: "/students/makeproject" },
+  { text: "SUBMIT PROJECT", icon: <SubmitSVG />, pathstring: "/students/submitproject" },
   { text: "BONUS CHALLENGE", icon: <BonusChallengeSVG />, pathstring: "/" },
   { text: "TAKE THE QUIZ", icon: <TakeQuizSVG />, pathstring: "/" },
 ];

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
@@ -20,25 +20,29 @@ import { GlobalStyle } from './styles/GlobalStyles';
 
 function App() {
   return (
-    <Router>
-     <Navbar />
-     <Routes>
-       <Route path='/' element={<Home /> }/>
-       <Route path='students' element={<Instructions />}> 
-        <Route path='instructions' element={<Instructions />}/>
-        <Route path='/students/objectives' element={<LearningObjectives />} />
-        <Route path='/students/makeproject' element={<MakeProject />} />
-        <Route path='/students/submitproject' element={<SubmitProject />} />
-        <Route path='/students/tutorial' element={<VideoTutorial />} />
-        </Route>
-       
-       
-       
-       <Route path='/teachers' element={<Teachers />} />
+    <>
+      <GlobalStyle />
+      <Router>
+        
+        <Routes>
 
-     </Routes>
-     <Footer />
-    </Router>
+          <Route path='/' element={<Home />} />
+          <Route path='students' element={<Instructions />}>
+            <Route path='instructions' element={<Instructions />} />
+            <Route path='/students/objectives' element={<LearningObjectives />} />
+            <Route path='/students/makeproject' element={<MakeProject />} />
+            <Route path='/students/submitproject' element={<SubmitProject />} />
+            <Route path='/students/tutorial' element={<VideoTutorial />} />
+          </Route>
+
+
+
+          <Route path='/teachers' element={<Teachers />} />
+
+        </Routes>
+     
+      </Router>
+    </>
   );
 }
 
