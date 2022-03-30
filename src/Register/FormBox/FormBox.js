@@ -5,29 +5,29 @@ import "./FormBox.css"
 
 function FormBox() {
 
-        
+
+
     return (
+        <div className = "CenteringDiv">
+            <div className="Container">
 
-        <div className="Container">
 
-            
-            
-            <LeftSection></LeftSection>
-            <MiddleBar></MiddleBar>
-            <RightSection></RightSection>
+                <LeftSection></LeftSection>
+                <MiddleBar></MiddleBar>
+                <RightSection></RightSection>
 
-            <h4>Close</h4>
+                <h4>Close</h4>
 
-            
 
-            
 
-            
-            
+
+
+
+
+            </div>
         </div>
 
-        
-        
+
     )
 }
 

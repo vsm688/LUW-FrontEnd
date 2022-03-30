@@ -16,9 +16,8 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box ;
         margin: 0;
       
-        height: 99vh;
-        
-        
+        height: 100vh;
+          
     }
     #root{
         display:flex;

@@ -22,7 +22,7 @@ import SideMenu from "../../components/styles/SideMenu/SideMenu";
 import Header from '../../components/styles/Header/Header';
 import PageLayout from "../../components/styles/PageLayout/PageLayout";
 import { StyledMain } from "../../components/styles/PageLayout/PageLayout.styled";
-import { StyledFooter } from "../../components/styles/PageLayout/PageLayout.styled";
+import { StyledFooter,StyledFooterText } from "../../components/styles/PageLayout/PageLayout.styled";
 const Instructions = () => {
   return (
     <>
@@ -57,7 +57,7 @@ const Instructions = () => {
           </ContentPanelContainer>
         </StyledMain>
       </PageLayout>
-      <StyledFooter>&copy; LevelupWorks</StyledFooter>
+      <StyledFooter><StyledFooterText><p>&copy; LevelupWorks</p></StyledFooterText></StyledFooter>
     </>
   );
 };

@@ -41,3 +41,10 @@ export const StyledFooter = styled.footer`
     background: white;
   }
 `;
+
+export const StyledFooterText = styled.div`
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`
