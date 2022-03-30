@@ -13,6 +13,7 @@ import LearningObjectives from "./pages/LearningObjectives/LearningObjectives";
 import MakeProject from "./pages/MakeProject/MakeProject";
 import SubmitProject from "./pages/SubmitProject/SubmitProject";
 import VideoTutorial from "./pages/VideoTutorial/VideoTutorial";
+import StudentInfoPage from './pages/StudentInfo/StudentInfoPage';
 import { GlobalStyle } from './styles/GlobalStyles';
 
 
@@ -23,7 +24,7 @@ function App() {
     <>
       <GlobalStyle />
       <Router>
-        
+       
         <Routes>
 
           <Route path='/' element={<Home />} />
@@ -36,11 +37,11 @@ function App() {
           </Route>
 
 
-
+          <Route path='/studentstest/student' element = {<StudentInfoPage/>}></Route>
           <Route path='/teachers' element={<Teachers />} />
 
         </Routes>
-     
+    
       </Router>
     </>
   );

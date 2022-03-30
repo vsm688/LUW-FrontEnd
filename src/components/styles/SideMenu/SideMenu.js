@@ -74,6 +74,7 @@ const SideMenu = () => {
                   <LearningObjectivesSVG
                     width={SVGwidth}
                     height={SVGHeight}
+                    color={"red"}
                   ></LearningObjectivesSVG>
                 </StyledParentDiv>
                 <StyledParentDiv>
@@ -164,12 +165,12 @@ const MenuItems = [
   {
     text: "LEARNING OBJECTIVES",
     icon: <LearningObjectivesSVG />,
-    pathstring: "/objectives",
+    pathstring: "/students/objectives",
   },
   {
     text: "INSTRUCTIONS",
     icon: <InstructionsSVG />,
-    pathstring: "/instructions",
+    pathstring: "/students/instructions",
   },
   { text: "VIDEO TUTORIAL", icon: <VideoSVG />, pathstring: "/students/tutorial" },
   { text: "MAKE PROJECT", icon: <MakeProjectSVG />, pathstring: "/students/makeproject" },
