@@ -45,15 +45,21 @@ export const ProjectPanel = styled.div`
     height: auto;
     display:flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
    
     margin-right: 20px;
     margin-bottom: 50px;
     margin-top:0;
     flex-direction: column;
     img{
-        width: 200px;
+        width: 100%;
         height: 150px;
+    }
+    div{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
     }
 
 `
@@ -61,7 +67,7 @@ export const ProjectPanel = styled.div`
 export const ProjectsContainer = styled.div`
     display:flex;
     flex-direction: row;
-    width: 50vw;
+    width: 60vw;
     align-content: flex-start;
     flex-wrap: wrap;
 `

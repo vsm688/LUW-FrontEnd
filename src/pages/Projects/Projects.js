@@ -131,10 +131,12 @@ const Projects = () => {
                                         return (
                                             <ProjectPanel key={val.ProjectID + 10000}>
                                                 {<img src={"/images/Projects/" + val.Name.replaceAll(" ","") + ".png"}></img>}
+                                                <div>
                                                 <h3 style={{margin:0}}>
                                                     {val.Name}
                                                 </h3>
                                                 <p>BEGINNER | {val.ActivityType}</p>
+                                                </div>
                                             </ProjectPanel>
                                         )
                                     })}</ProjectsContainer></div>
