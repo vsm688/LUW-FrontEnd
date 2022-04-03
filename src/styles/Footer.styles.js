@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.div`
     width: 100%;
-    height: 400px;
+    min-height: 400px;
     background-color: #B2E4FA;
     display: flex;
     flex-direction: column;

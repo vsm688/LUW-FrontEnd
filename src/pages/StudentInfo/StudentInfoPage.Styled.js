@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 
 export const ImgContainer = styled.img`
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
+    padding-top: 20px;
     margin-bottom: 20px;
 `
 

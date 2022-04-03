@@ -33,8 +33,11 @@ const StudentInfoPage = () => {
      "loading"
     </>
   } 
+
   const photoPath = studentInfo.ImagePath;
-  console.log(photoPath);
+  console.log(studentInfo.StudentID);
+  const photoPath2 = "/images/" + studentInfo.StudentID +".png";
+  
   return (
     <>
       <StudentPageContainer>
@@ -42,7 +45,8 @@ const StudentInfoPage = () => {
         <StudentMainContent>
           <StudentMainContentSecondary>
             <StudentProfileDiv>
-              {/* <ImgContainer src={require(photoPath)}></ImgContainer> */}
+        
+              <ImgContainer src={photoPath2}></ImgContainer>
               <ProfileButton>Edit profile</ProfileButton>
               <ProfileButton>Change photo</ProfileButton>
             </StudentProfileDiv>

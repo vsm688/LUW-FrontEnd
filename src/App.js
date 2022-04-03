@@ -16,7 +16,7 @@ import VideoTutorial from "./pages/VideoTutorial/VideoTutorial";
 import StudentInfoPage from './pages/StudentInfo/StudentInfoPage';
 import { GlobalStyle } from './styles/GlobalStyles';
 
-
+import Projects from './pages/Projects/Projects';
 
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
             <Route path='/students/tutorial' element={<VideoTutorial />} />
           </Route>
 
-
+          <Route path="/projects" element={<Projects/>}></Route>
           <Route path='/studentstest/student' element = {<StudentInfoPage/>}></Route>
           <Route path='/teachers' element={<Teachers />} />
 
