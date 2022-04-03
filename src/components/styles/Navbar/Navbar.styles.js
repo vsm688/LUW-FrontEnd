@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const NavbarContainer = styled.nav`
     width: 100%;
@@ -23,7 +23,7 @@ export const LeftContainer = styled.div`
     flex: 20%;
     display: flex;
     align-items: center;
-    padding-left: 5%;
+    padding-left: 7%;
 `;
 
 export const MiddleContainer = styled.div`
@@ -76,14 +76,16 @@ export const NavbarLink = styled(Link)`
     }
 `;
 
-export const LogInLink = styled(Link)`
-white-space: nowrap;
+export const LogInLink = styled.button`
+    border: none;
+    background-color: #43C0F6;
+    white-space: nowrap;
     color: white;
     font-size: 1rem;
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     text-transform: uppercase;
-    margin: 5px;
+    margin: 0px;
 `;
 
 export const LanguageButton = styled.img`
@@ -104,7 +106,7 @@ export const NavbarLinkExtended = styled(Link)`
 
 export const Logo = styled.img`
     margin: 5px;
-    max-width: 120px;
+    max-width: 140px;
     height: auto;
 `;
 
@@ -132,4 +134,3 @@ export const NavbarExtendedContainer = styled.div`
         display: none;
     }
 `;
-

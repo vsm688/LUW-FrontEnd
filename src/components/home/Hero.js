@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 HeroBackground,
 HeroContainer,
@@ -11,10 +11,15 @@ LearnButton,
 SignButton,
 Span,
 } from './styles/Hero.styles';
+import Modal from '../login/loginModal';
 
 function Hero() {
+
+    const [openModal, setOpenModal] = useState(false);
+
     return (
         <HeroBackground>
+            {openModal && <Modal closeModal={setOpenModal}/>}
             <HeroContainer>
                 <LeftSide>
                     <HeroHeading>Prepare young minds <br />
@@ -24,7 +29,10 @@ function Hero() {
                     our project-based learning programme.</HeroBody>
                     <HeroButtons>
                         <LearnButton>Learn more</LearnButton>
-                        <SignButton>Sign up</SignButton>
+                        <SignButton onClick={() => {
+                            setOpenModal(true);
+                        }}
+                        >Sign up</SignButton>
                     </HeroButtons>
                 </LeftSide>
                 <RightSide></RightSide>
