@@ -7,6 +7,8 @@ function SigninForm() {
     const [emailReg, setEmailReg] = useState('');
     const [passwordReg, setPasswordReg] = useState('');
 
+    Axios.defaults.withCredentials = true
+
     const register = () => {
         Axios.post('http://localhost:3001/register', {
             name: nameReg,
