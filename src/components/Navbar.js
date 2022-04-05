@@ -36,7 +36,7 @@ function Navbar() {
         <MiddleContainer>
             <NavbarLinkContainer>
             <NavbarLink to='/' >Home</NavbarLink>
-            <NavbarLink to='/students' >Students</NavbarLink>
+            <NavbarLink to='/student' >Students</NavbarLink>
             <NavbarLink to='/teachers' >Teachers</NavbarLink>
             <OpenLinksButton onClick={() => {
                 setExtendNavbar((curr) => !curr);

@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 
 export const ImgContainer = styled.img`
-    width: 100px;
-    height: 100px;
+    width: 50%;
+    height: 80%;
     padding-top: 20px;
     margin-bottom: 20px;
 `
@@ -82,7 +82,7 @@ export const StudentPageContainer = styled.div`
 `
 
 export const StudentProfileDiv = styled.div`
-    width: 20%;
+    width: 12%;
     height: 40%;
     background-color: white;
     margin-right: 20px;
@@ -91,4 +91,5 @@ export const StudentProfileDiv = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 40px;
 `

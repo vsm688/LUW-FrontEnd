@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
     display:flex;
     min-height: 100vh;
-    overflow: auto;
+    height: auto;
     justify-content: center;
+    overflow: scroll;
 `
 
 export const LeftMenu = styled.div`
@@ -24,14 +25,16 @@ export const RightItems = styled.div`
 `
 export const Headercontainer = styled.div`
     display:flex;
-    width:100%;
+  
     margin-left: 20vw;
     flex-direction: column;
     padding-bottom: 20px;
     h1{
+        color:#6C6C6C;
         margin:5;
     }
     p{
+        color:#6C6C6C;
         margin:0;
     }
 `
@@ -97,4 +100,49 @@ export const Line = styled.div`
 export const ButtonContainer = styled.div`
     display:flex;
     justify-content: space-between;
+    width: 60vw;
+
+`
+
+export const BacktoTopContainer = styled.div`
+    display:flex;
+    width:60vw;
+    justify-content: flex-end;
+
+    margin-bottom: 50px;
+`
+
+export const BacktoTopButton = styled.button`
+    width: auto;
+    height: 40px;
+    padding: 0 20px;
+ 
+  
+    background-color: #E5AB2C;
+    margin:0;
+    border: 0;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #FFFFFF;
+`
+export const DifficultyGroup = styled.div`
+    display:flex;
+`
+
+export const DisplayPagesGroup = styled.div`
+    display:flex;
+    margin-right: 40px;
+    align-items: flex-start;
+    height:auto;
+`
+export const PageButton = styled.button`
+    width: 30px;
+    height: 20px;
+    margin:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  
+
 `

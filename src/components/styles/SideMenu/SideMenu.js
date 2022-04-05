@@ -24,13 +24,15 @@ import { ReactComponent as SettingsSVG } from "../../../images/Settings.svg";
 import { ReactComponent as LogoutSVG } from "../../../images/Logout.svg";
 import { ReactComponent as AdSVG } from "../../../images/Advertisement.svg";
 import { ReactComponent as TriangleArrowSVG } from "../../../images/Triangle.svg";
+import { NavLink } from "react-router-dom";
 // import { Link } from 'react-router-dom';
-const SideMenu = () => {
+const SideMenu = (props) => {
   const [Open, SetOpen] = useState(true);
   const handleOpenCloseState = () => {
     SetOpen(!Open);
   };
-
+  
+  
   return (
     <>
       <StyledSideBar>
@@ -40,13 +42,16 @@ const SideMenu = () => {
               <MenuItemsContainer>
                 {MenuItems.map(({ text, icon, pathstring }) => (
                   <StyledParentDiv key={text}>
-                    <StyledLink to={pathstring}>
+
+                    <NavLink className={({ isActive }) => (isActive ? "active" : "noneactive")} to={{pathname:pathstring,state: {open:false} }
+                }>
                       <StyledLinkIcon>{icon}</StyledLinkIcon>
                       <p>{text}</p>
-                    </StyledLink>
+                    </NavLink>
                   </StyledParentDiv>
                 ))}
               </MenuItemsContainer>
+
 
               <StyledSideBarButtonContainer>
                 <StyledSideBarButton
@@ -71,11 +76,14 @@ const SideMenu = () => {
             <>
               <MobileContainer>
                 <StyledParentDiv>
-                  <LearningObjectivesSVG
-                    width={SVGwidth}
-                    height={SVGHeight}
-                    color={"red"}
-                  ></LearningObjectivesSVG>
+
+                  <NavLink className={({ isActive }) => (isActive ? "active" : "noneactive")} to={"/students/objectives"}>
+                    <LearningObjectivesSVG
+                      width={SVGwidth}
+                      height={SVGHeight}
+                      color={"red"}
+                    ></LearningObjectivesSVG>
+                    </NavLink>
                 </StyledParentDiv>
                 <StyledParentDiv>
                   <InstructionsSVG
@@ -115,37 +123,57 @@ const SideMenu = () => {
           <>
             <MenuItemsContainer>
               <StyledParentDiv>
-                <LearningObjectivesSVG
-                  width={SVGwidth}
-                  height={SVGHeight}
-                ></LearningObjectivesSVG>
+              <NavLink className={({ isActive }) => (isActive ? "active" : "noneactive")} to={"/students/objectives"}>
+                    <LearningObjectivesSVG
+                      width={SVGwidth}
+                      height={SVGHeight}
+                      color={"red"}
+                    ></LearningObjectivesSVG>
+                    </NavLink>
               </StyledParentDiv>
               <StyledParentDiv>
+              <NavLink className={({ isActive }) => (isActive ? "active" : "noneactive")} to={"/students/instructions"}>
                 <InstructionsSVG
                   width={SVGwidth}
                   height={SVGHeight}
                 ></InstructionsSVG>
+                </NavLink>
               </StyledParentDiv>
+
               <StyledParentDiv>
+              <NavLink className={({ isActive }) => (isActive ? "active" : "noneactive")} to={"/students/tutorial"}>
                 <VideoSVG width={SVGwidth} height={SVGHeight}></VideoSVG>
+                </NavLink>
               </StyledParentDiv>
+
               <StyledParentDiv>
+              <NavLink className={({ isActive }) => (isActive ? "active" : "noneactive")} to={"/students/makeproject"}>
                 <MakeProjectSVG
                   width={SVGwidth}
                   height={SVGHeight}
                 ></MakeProjectSVG>
+                </NavLink>
               </StyledParentDiv>
               <StyledParentDiv>
+              <NavLink className={({ isActive }) => (isActive ? "active" : "noneactive")} to={"/students/submitproject"}>
                 <SubmitSVG width={SVGwidth} height={SVGHeight}></SubmitSVG>
+                </NavLink>
               </StyledParentDiv>
+
               <StyledParentDiv>
+              <NavLink className={({ isActive }) => (isActive ? "active" : "noneactive")} to={"/students/bonusChallenge"}>
                 <BonusChallengeSVG
                   width={SVGwidth}
                   height={SVGHeight}
                 ></BonusChallengeSVG>
+                </NavLink>
+
               </StyledParentDiv>
+              
               <StyledParentDiv>
+              <NavLink className={({ isActive }) => (isActive ? "active" : "noneactive")} to={"/students/TakeQuiz"}>
                 <TakeQuizSVG width={SVGwidth} height={SVGHeight}></TakeQuizSVG>
+                </NavLink>
               </StyledParentDiv>
             </MenuItemsContainer>
             <StyledSideBarButtonContainer>

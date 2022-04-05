@@ -1,91 +1,55 @@
-import React from "react";
-import ContentPanelContainer from "../ContentPanelContainer/ContentPanelContainer";
-import {
-  StyledHeaderDiv,
-  StyledBlockDivContainer,
-  StyledBlockDiv,
-  StyledLeftBlockDiv,
-  ChildBlockDiv,
-  BlockChildContainer,
-  BlockParent,
-} from "./Instructions.styled";
-import { ReactComponent as CBlockSVG } from "../../images/ControlBlocks.svg";
-import { ReactComponent as LBlockSVG } from "../../images/LookBlocks.svg";
-import { ReactComponent as LBlockChild1SVG } from "../../images/LBlockChild1.svg";
-import { ReactComponent as LBlockChild2SVG } from "../../images/LBlockChild2.svg";
-import { ReactComponent as MBlockSVG } from "../../images/MotionBlocks.svg";
-import { ReactComponent as CBlockChild1SVG } from "../../images/CBlockChild1.svg";
-import { ReactComponent as MBlockChildSVG } from "../../images/MBlockChild1.svg";
-import PurpleBlock from "../../images/purpleblock.png";
-import PurpleBlockChild from "../../images/purpleblockchild.png";
+import React from 'react'
 import SideMenu from "../../components/styles/SideMenu/SideMenu";
-import Header from '../../components/styles/Header/Header';
+import ContentPanelContainer from "../ContentPanelContainer/ContentPanelContainer";
+import { StyledMain } from '../../components/styles/PageLayout/PageLayout.styled';
 import PageLayout from "../../components/styles/PageLayout/PageLayout";
-import { StyledMain } from "../../components/styles/PageLayout/PageLayout.styled";
-import { StyledFooter, StyledFooterText } from "../../components/styles/PageLayout/PageLayout.styled";
-import { useState } from "react";
-import { useEffect } from "react";
+import Header from '../../components/styles/Header/Header';
+
+
+import { StyledFooter,StyledFooterText } from '../../components/styles/PageLayout/PageLayout.styled';
 const Instructions = () => {
+  return (
+    <>
+      <Header></Header>
+      <PageLayout>
+        <SideMenu></SideMenu>
+        <StyledMain>
+          <ContentPanelContainer>
 
-  const [InstructionsComponents, setInstructionsComponents] = useState(null);
-  const [loading, setLoading] = useState(true)
+            <div id="makeProjectContent">
 
-  async function fetchInstructionsContent() {
-    const response = fetch("http://localhost:5000/instructions")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("this is the data", data);
-        setInstructionsComponents(data)
-      })
-      .finally(() => {
-        setLoading(false);
-      })
-  }
+              <div id="InnerTextDiv">
 
-  useEffect(() => {
-    const response = fetchInstructionsContent();
+                <div id="textDiv" >
+                  <div className="CenterDivText">
+                    <h1>Test</h1>
+                    <p>If you haven't used Scratch before, you will need to join Scratch first. </p>
+                    <p>Go to https://scratch.mit.edu. Click on Join Scratch.</p>
+                  </div>
+                </div>
+                <div id="ProjectBanner" >
+                  <button className="LeftButton">a</button>
+                  <img width={"50%"} src={"/images/Projects/Instructions/InstructionsBanner.png"}></img>
+                  <button className="RightButton">a</button>
+                </div>
+                <div id="BottomText">
+                  <div className="CenterDivText">
+                  <p>
+                  Follow the instructions to join. You will need a username and a password that you will remember. If possible, you should also verify your email address so that you can Share projects later. Ask your teacher to help with this step if you don't have an email address, or if you are not sure what to do.
+                  </p>
+                  </div>
+                </div>
+              </div>
 
-  }, []);
-  // We know if loading hasn't completed that the studentInfo state hasn't been updated. Therefore we display loading on the screen. Else we have access
-  // to all the fields and thus can load the data.
+            </div>
 
-    return (
 
-      <>
-        <Header></Header>
-        <PageLayout>
+          </ContentPanelContainer>
+        </StyledMain>
+      </PageLayout >
+      <StyledFooter><StyledFooterText><p>&copy; LevelupWorks 2020</p></StyledFooterText></StyledFooter>
+    </>
+  )
+}
 
-          <SideMenu></SideMenu>
-          <StyledMain>
-            <ContentPanelContainer>
-              <StyledHeaderDiv>
-                <h1>Explore Scratch blocks</h1>
-                <p>
-                  Learn the basic function of some basic scratch block as as "say",
-                  "wait", "go to" and "hide."
-                </p>
-              </StyledHeaderDiv>
-
-              <StyledBlockDivContainer>
-                <StyledBlockDiv>
-                  <img src={PurpleBlock} width={"50%"} height={"85%"}></img>
-                  <img src={PurpleBlockChild} width={"25%"} height={"20%"}></img>
-                </StyledBlockDiv>
-                <StyledBlockDiv>
-                  <img src={PurpleBlock} width={"50%"} height={"85%"}></img>
-                  <img src={PurpleBlockChild} width={"25%"} height={"20%"}></img>
-                </StyledBlockDiv>
-                <StyledBlockDiv>
-                  <img src={PurpleBlock} width={"50%"} height={"85%"}></img>
-                  <img src={PurpleBlockChild} width={"25%"} height={"20%"}></img>
-                </StyledBlockDiv>
-              </StyledBlockDivContainer>
-            </ContentPanelContainer>
-          </StyledMain>
-        </PageLayout>
-        <StyledFooter><StyledFooterText><p>&copy; LevelupWorks</p></StyledFooterText></StyledFooter>
-      </>
-    );
-  };
-
-  export default Instructions;
+export default Instructions;

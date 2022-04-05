@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Link}  from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const StyledSideBar = styled.div`
     display: flex;
@@ -9,7 +9,7 @@ export const StyledSideBar = styled.div`
     background-color: #43C0F6;
 
     overflow: auto;
-    justify-content:  ${( {isOpen}) => (isOpen ? 'space-between' : '')} ;
+    justify-content:  ${({ isOpen }) => (isOpen ? 'space-between' : '')} ;
     p{
         margin: 0;
         font-size: 10px ;
@@ -52,9 +52,9 @@ export const StyledSideBarButton = styled.div`
     width: 40px;
     cursor: pointer;
     transform: ${({ isOpen }) => (isOpen ? `rotate(180deg)` : `rotate(0)`)};
-    border-top-right-radius: ${( {isOpen}) => (isOpen ? '10px' : '10px')};
-    border-bottom-right-radius: ${( {isOpen}) => (isOpen ? '10px' : '10px')};
-    left: ${( {isOpen}) => (!isOpen ? '0' : '')};
+    border-top-right-radius: ${({ isOpen }) => (isOpen ? '10px' : '10px')};
+    border-bottom-right-radius: ${({ isOpen }) => (isOpen ? '10px' : '10px')};
+    left: ${({ isOpen }) => (!isOpen ? '0' : '')};
     
 
 `
@@ -67,7 +67,34 @@ export const StyledMenuContainer = styled.div`
 export const StyledParentDiv = styled.div`
     display:flex;
     padding: 15px;
+    padding: 15px 0;
     align-items: center ;
+ 
+.noneactive {
+    padding: 10px 15px;
+  list-style: none ;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  
+}
+
+
+.active {
+    p{
+    color:#707070;
+    }
+    padding: 10px 15px;
+    background: #B2E4FA;
+    list-style: none ;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width:100%;
+    box-sizing: border-box;
+  
+}
+
 `
 
 export const StyledLinkIcon = styled.div`
@@ -95,12 +122,13 @@ export const StyledSettingsSVG = styled.div`
     }
 `
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(NavLink)`
     list-style: none ;
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: inherit;
+  
+   
 `
 
 export const MobileContainer = styled.div`
