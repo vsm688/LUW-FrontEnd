@@ -75,9 +75,9 @@ const StudentInfoPage = () => {
                     <InformationContent><p>Contact No</p> <div><p></p></div></InformationContent>
                     <InformationContent><p>Email Address</p> <div><p></p></div></InformationContent></>:
                     <>                  <InformationContent><p>School</p> <div><p>{studentInfo.School}</p></div></InformationContent>
-                    <InformationContent><p>Teacher</p> <div><p>{studentInfo.Teacher}</p></div></InformationContent>
+                    <InformationContent><p>Teacher</p> <div><p>{studentInfo.TeacherName}</p></div></InformationContent>
                     <InformationContent><p>Course</p> <div><p>Beginner</p></div></InformationContent>
-                    <InformationContent><p>Date of Birth</p> <div><p>{studentInfo.DateOfBirth}</p></div></InformationContent>
+                    <InformationContent><p>Date of Birth</p> <div><p>{studentInfo.DateOfBirth.split("T")[0]}</p></div></InformationContent>
                     <InformationContent><p>Contact No</p> <div><p>{studentInfo.ContactNumber}</p></div></InformationContent>
                     <InformationContent><p>Email Address</p> <div><p>{studentInfo.Email}</p></div></InformationContent></>
                     }
