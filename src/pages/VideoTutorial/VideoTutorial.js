@@ -5,7 +5,7 @@ import { StyledMain } from '../../components/styles/PageLayout/PageLayout.styled
 import ContentPanelContainer from '../ContentPanelContainer/ContentPanelContainer';
 import PageLayout from "../../components/styles/PageLayout/PageLayout";
 import Header from '../../components/styles/Header/Header';
-import { StyledFooter } from '../../components/styles/PageLayout/PageLayout.styled';
+import { StyledFooter,StyledFooterText } from '../../components/styles/PageLayout/PageLayout.styled';
 const VideoTutorial = () => {
   return (
     <>
@@ -14,11 +14,17 @@ const VideoTutorial = () => {
         <SideMenu></SideMenu>
         <StyledMain>
           <ContentPanelContainer>
-            <div>LearningObjectives</div>
+            <div id="VideoAligner">
+            <div id="VideoContainer">
+                <button className="LeftButton"><img src={"/images/Projects/VideoTutorial/left.png"}></img></button>
+                <img src={"/images/Projects/VideoTutorial/VideoTutorial.png"}></img>
+                <button className="RightButton"><img src={"/images/Projects/VideoTutorial/right.png"}></img></button>
+            </div>
+            </div>
           </ContentPanelContainer>
         </StyledMain>
       </PageLayout >
-      <StyledFooter></StyledFooter>
+      <StyledFooter><StyledFooterText><p>&copy; LevelupWorks 2020</p></StyledFooterText></StyledFooter>
     </>
   )
 }

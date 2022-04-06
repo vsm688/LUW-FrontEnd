@@ -4,7 +4,7 @@ import { StyledMain } from '../../components/styles/PageLayout/PageLayout.styled
 import ContentPanelContainer from '../ContentPanelContainer/ContentPanelContainer';
 import Header from '../../components/styles/Header/Header';
 import PageLayout from "../../components/styles/PageLayout/PageLayout";
-import { StyledFooter } from '../../components/styles/PageLayout/PageLayout.styled';
+import { StyledFooter,StyledFooterText } from '../../components/styles/PageLayout/PageLayout.styled';
 const MakeProject = () => {
   return (
     <>
@@ -13,11 +13,12 @@ const MakeProject = () => {
         <SideMenu></SideMenu>
         <StyledMain>
           <ContentPanelContainer>
-            <div>LearningObjectives</div>
+
+
           </ContentPanelContainer>
         </StyledMain>
       </PageLayout >
-      <StyledFooter></StyledFooter>
+      <StyledFooter><StyledFooterText><p>&copy; LevelupWorks 2020</p></StyledFooterText></StyledFooter>
     </>
   )
 }
