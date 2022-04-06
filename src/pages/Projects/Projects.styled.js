@@ -116,6 +116,7 @@ export const BacktoTopButton = styled.button`
     width: auto;
     height: 40px;
     padding: 0 20px;
+    cursor: pointer;
  
   
     background-color: #E5AB2C;
@@ -143,6 +144,6 @@ export const PageButton = styled.button`
     align-items: center;
     justify-content: center;
     border: none;
-  
+    
 
 `

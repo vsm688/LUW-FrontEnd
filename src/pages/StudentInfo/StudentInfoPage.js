@@ -1,20 +1,25 @@
 import React from 'react'
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import {
+import {BackToProjects,
   StudentPageContainer, StudentMainContent, StudentProfileDiv, StudentInfoContainer, StudentMainContentSecondary,
-  ImgContainer, ProfileButton, StudentInfoDiv, InformationContent
+  ImgContainer, ProfileButton, StudentInfoDiv, InformationContent,StudentInfoFlexContainer
 } from "./StudentInfoPage.Styled";
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { type } from '@testing-library/user-event/dist/type';
+import { useNavigate } from "react-router-dom";
 const StudentInfoPage = () => {
 
   const [studentInfo, setStudentInfo] = useState(null);
   const [loading, setLoading] = useState(true)
   const [studentID, setStudentID] = useState(1);
 
-
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `/projects`; 
+    navigate(path);
+  }
 
 
   async function fetchStudent() {
@@ -58,6 +63,7 @@ const StudentInfoPage = () => {
 
                 }
               </StudentProfileDiv>
+              <StudentInfoFlexContainer>
               <StudentInfoContainer>
               
                 <StudentInfoDiv>
@@ -75,10 +81,12 @@ const StudentInfoPage = () => {
                     <InformationContent><p>Contact No</p> <div><p>{studentInfo.ContactNumber}</p></div></InformationContent>
                     <InformationContent><p>Email Address</p> <div><p>{studentInfo.Email}</p></div></InformationContent></>
                     }
-
+                    
                 </StudentInfoDiv>
-
+            
               </StudentInfoContainer>
+              <BackToProjects onClick={routeChange}>Back to Projects</BackToProjects>
+              </StudentInfoFlexContainer>
             </StudentMainContentSecondary>
           </StudentMainContent>
           <Footer></Footer>

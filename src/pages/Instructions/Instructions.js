@@ -28,9 +28,9 @@ const Instructions = () => {
                   </div>
                 </div>
                 <div id="ProjectBanner" >
-                  <button className="LeftButton">a</button>
+                  <button className="LeftButton"><img src={"/images/Projects/instructions/left.png"}></img></button>
                   <img width={"50%"} src={"/images/Projects/Instructions/InstructionsBanner.png"}></img>
-                  <button className="RightButton">a</button>
+                  <button className="RightButton"><img src={"/images/Projects/instructions/right.png"}></img></button>
                 </div>
                 <div id="BottomText">
                   <div className="CenterDivText">

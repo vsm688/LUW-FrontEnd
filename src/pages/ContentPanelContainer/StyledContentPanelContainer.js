@@ -73,12 +73,24 @@ export const StyledContentPanel = styled.div`
              display:flex;
              width: 100%;
              justify-content: space-between;
+             align-items: center;
              margin-bottom: 40px;
              .RightButton{
                 margin-right: 4%;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: rgba(255,255,255,.5);
+                border: 3px solid white;
+                
              }
              .LeftButton{
                 margin-left: 4%;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: rgba(255,255,255,.5);
+                border: 3px solid white;
              }
          }
          #BottomText{
@@ -107,14 +119,24 @@ export const StyledContentPanel = styled.div`
              
              img{
                  height: 90%;
+                 width: 60%;
              }
              .RightButton{
-                 margin-right: 5%;
-                 height: 10%;
+                margin-right: 4%;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: rgba(255,255,255,.5);
+                border: 3px solid white;
+                
              }
              .LeftButton{
-                height: 10%;
-                 margin-left: 5%;
+                margin-left: 4%;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: rgba(255,255,255,.5);
+                border: 3px solid white;
              }
          }
     @media screen and (max-width:1000px) {
