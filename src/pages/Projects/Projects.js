@@ -16,16 +16,16 @@ const Projects = () => {
         { id: 4, name: "Game", type: "ActivityType", checked: false },
         { id: 5, name: "Chatbot", type: "ActivityType", checked: false },
         { id: 6, name: "Augmented Reality", type: "ActivityType", checked: false },
-        { id: 7, name: "1-4", type: "ActivityType", type: "Year", checked: false },
-        { id: 8, name: "5-6", type: "ActivityType", type: "Year", checked: false },
-        { id: 9, name: "7-8", type: "ActivityType", type: "Year", checked: false },
-        { id: 10, name: "9-13", type: "ActivityType", type: "Year", checked: false },
-        { id: 11, name: "Computer Science", type: "ActivityType", checked: false },
-        { id: 12, name: "Maths", type: "ActivityType", type: "Year", checked: false },
-        { id: 13, name: "Science", type: "ActivityType", type: "Year", checked: false },
-        { id: 14, name: "Language", type: "ActivityType", type: "Year", checked: false },
-        { id: 15, name: "Art", type: "ActivityType", type: "Year", checked: false },
-        { id: 16, name: "Music", type: "ActivityType", type: "Year", checked: false },]);
+        { id: 7, name: "1-4", type: "ActivityType", type: "Year", checked: false, lower:1, higher: 4},
+        { id: 8, name: "5-6", type: "ActivityType", type: "Year", checked: false,lower:5,higher:6 },
+        { id: 9, name: "7-8", type: "ActivityType", type: "Year", checked: false,lower:7,higher:8 },
+        { id: 10, name: "9-13", type: "ActivityType", type: "Year", checked: false,lower:9,higher:13 },
+        { id: 11, name: "Computer Science", type: "Subject", checked: false },
+        { id: 12, name: "Maths", type: "ActivityType", type: "Subject", checked: false },
+        { id: 13, name: "Science", type: "ActivityType", type: "Subject", checked: false },
+        { id: 14, name: "Language", type: "ActivityType", type: "Subject", checked: false },
+        { id: 15, name: "Art", type: "ActivityType", type: "Subject", checked: false },
+        { id: 16, name: "Music", type: "ActivityType", type: "Subject", checked: false },]);
 
 
     const [projectData, setProjectData] = useState(null);
