@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     NavbarContainer, 
     LeftContainer, 
@@ -30,6 +30,11 @@ function Navbar() {
     const [extendNavbar, setExtendNavbar] = useState(false);
     const [openModal, setOpenModal] = useState(false);
 
+    const [loggedIn, setLoggedIn] = useState(false);
+    const [loginStatus, setLoginStatus] = useState('');
+
+
+
     return (
     <NavbarContainer extendNavbar={extendNavbar}>
         <NavbarInnerContainer>
@@ -55,13 +60,22 @@ function Navbar() {
                 <LanguageButton src={NZ} ></LanguageButton>
                 <LanguageButton src={tinoRangatiratanga} ></LanguageButton>
             </LangContainer>
+            {!loggedIn ? (
             <LogInContainer>
             <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon>
             <LogInLink to='/login' onClick={() => {
                             setOpenModal(true);
                         }}
                         >Register | Log In</LogInLink>
-            </LogInContainer>
+            </LogInContainer> 
+            ) : (
+                <LogInContainer>
+                    <LogInLink to='/profile'>
+                        bruce wayne
+                    </LogInLink>
+                </LogInContainer>
+            )}
+
         </RightContainer>
         </NavbarInnerContainer>
         {extendNavbar && (
