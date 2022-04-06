@@ -7,14 +7,26 @@ import OneSymbol from "../../../images/Ellipse 7.png";
 import SmallDot  from "../../../images/Ellipse 9.png";
 import { ReactComponent as NZFlag } from "../../../images/NZflag.svg";
 import { ReactComponent as MaoriFlag } from "../../../images/MaoriFlag.svg";
+import { useNavigate } from 'react-router-dom';
 const Header = () => {
+
+
+  let navigate = useNavigate(); 
+
+  const homeChange = () =>{
+    let path = "/";
+    navigate(path);
+  }
+
+
+
   return (
     <StyledHeader>
 
       {/* <img src={starImg} color={'blue'}></img> */}
       <StyledLeftHeaderGroup>
         <StyledLogoContainer>
-          <HeaderLogo></HeaderLogo>
+          <HeaderLogo onClick={() =>{homeChange()}} ></HeaderLogo>
         </StyledLogoContainer>
 
         <ProjectContainer>

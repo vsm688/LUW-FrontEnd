@@ -9,7 +9,8 @@ import {
   StyledSideBarButtonContainer,
   StyledLink,
   MobileContainer,
-  MenuItemsContainer
+  MenuItemsContainer,
+  MobileStyledSettingsSVG
 } from "./SideMenu.styled";
 import { useState } from "react";
 import { ReactComponent as LearningObjectivesSVG } from "../../../images/Target.svg";
@@ -19,19 +20,32 @@ import { ReactComponent as MakeProjectSVG } from "../../../images/MakeProject.sv
 import { ReactComponent as SubmitSVG } from "../../../images/Submit.svg";
 import { ReactComponent as BonusChallengeSVG } from "../../../images/Medal.svg";
 import { ReactComponent as TakeQuizSVG } from "../../../images/NotePad.svg";
-import { ReactComponent as ProfileSVG } from "../../../images/Logout.svg";
+import { ReactComponent as ProfileSVG } from "../../../images/Profile.svg";
 import { ReactComponent as SettingsSVG } from "../../../images/Settings.svg";
 import { ReactComponent as LogoutSVG } from "../../../images/Logout.svg";
+import { ReactComponent as ProfileSVGMobile } from "../../../images/ProfileSVGMobile.svg";
+import { ReactComponent as SettingsSVGMobile } from "../../../images/SettingsSVGMobile.svg";
+import { ReactComponent as LogoutSVGMobile } from "../../../images/LogoutSVGMobile.svg";
 import { ReactComponent as AdSVG } from "../../../images/Advertisement.svg";
 import { ReactComponent as TriangleArrowSVG } from "../../../images/Triangle.svg";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import { Link } from 'react-router-dom';
 const SideMenu = (props) => {
   const [Open, SetOpen] = useState(true);
   const handleOpenCloseState = () => {
     SetOpen(!Open);
   };
-  
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `/student`; 
+    navigate(path);
+  }
+  const homeChange = () =>{
+    let path = "/";
+    navigate(path);
+  }
+
   
   return (
     <>
@@ -67,55 +81,14 @@ const SideMenu = (props) => {
               </StyledAdContainer>
 
               <StyledSettingsSVG>
-                <ProfileSVG />
-                <SettingsSVG />
-                <LogoutSVG />
+                <ProfileSVG onClick={() => {routeChange()}} />
+                <SettingsSVG  />
+                <LogoutSVG onClick ={ () => {homeChange()}} />
               </StyledSettingsSVG>
             </>
 
             <>
-              <MobileContainer>
-                <StyledParentDiv>
-
-                  <NavLink className={({ isActive }) => (isActive ? "active" : "noneactive")} to={"/students/objectives"}>
-                    <LearningObjectivesSVG
-                      width={SVGwidth}
-                      height={SVGHeight}
-                      color={"red"}
-                    ></LearningObjectivesSVG>
-                    </NavLink>
-                </StyledParentDiv>
-                <StyledParentDiv>
-                  <InstructionsSVG
-                    width={SVGwidth}
-                    height={SVGHeight}
-                  ></InstructionsSVG>
-                </StyledParentDiv>
-                <StyledParentDiv>
-                  <VideoSVG width={SVGwidth} height={SVGHeight}></VideoSVG>
-                </StyledParentDiv>
-                <StyledParentDiv>
-                  <MakeProjectSVG
-                    width={SVGwidth}
-                    height={SVGHeight}
-                  ></MakeProjectSVG>
-                </StyledParentDiv>
-                <StyledParentDiv>
-                  <SubmitSVG width={SVGwidth} height={SVGHeight}></SubmitSVG>
-                </StyledParentDiv>
-                <StyledParentDiv>
-                  <BonusChallengeSVG
-                    width={SVGwidth}
-                    height={SVGHeight}
-                  ></BonusChallengeSVG>
-                </StyledParentDiv>
-                <StyledParentDiv>
-                  <TakeQuizSVG
-                    width={SVGwidth}
-                    height={SVGHeight}
-                  ></TakeQuizSVG>
-                </StyledParentDiv>
-              </MobileContainer>
+            
             </>
           </>
         )}
@@ -181,6 +154,11 @@ const SideMenu = (props) => {
                 <TriangleArrowSVG></TriangleArrowSVG>
               </StyledSideBarButton>
             </StyledSideBarButtonContainer>
+            <MobileStyledSettingsSVG>
+                <ProfileSVGMobile onClick={() => {routeChange()}} />
+                <SettingsSVGMobile  />
+                <LogoutSVGMobile onClick ={ () => {homeChange()}} />
+              </MobileStyledSettingsSVG>
           </>
         )}
       </StyledSideBar>

@@ -39,7 +39,7 @@ export const StudentInfoDiv = styled.div`
 export const InformationContent = styled.div`
     display:flex;
     justify-content: space-between;
-   
+    color:#707070;
 
     div{
         text-align: left;
@@ -115,4 +115,10 @@ export const BackToProjects = styled.button`
     border: 0;
     border-radius: 10px;
     cursor: pointer;
+`
+
+export const NameDiv = styled.div`
+    display:flex;
+    justify-content: center;
+    color: #707070;
 `

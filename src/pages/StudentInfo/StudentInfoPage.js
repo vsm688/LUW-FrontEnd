@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import {BackToProjects,
   StudentPageContainer, StudentMainContent, StudentProfileDiv, StudentInfoContainer, StudentMainContentSecondary,
-  ImgContainer, ProfileButton, StudentInfoDiv, InformationContent,StudentInfoFlexContainer
+  ImgContainer, ProfileButton, StudentInfoDiv, InformationContent,StudentInfoFlexContainer,NameDiv
 } from "./StudentInfoPage.Styled";
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -74,7 +74,8 @@ const StudentInfoPage = () => {
                     <InformationContent><p>Date of Birth</p> <div><p></p></div></InformationContent>
                     <InformationContent><p>Contact No</p> <div><p></p></div></InformationContent>
                     <InformationContent><p>Email Address</p> <div><p></p></div></InformationContent></>:
-                    <>                  <InformationContent><p>School</p> <div><p>{studentInfo.School}</p></div></InformationContent>
+                    
+                    <><NameDiv><h1>{studentInfo.Name}</h1>     </NameDiv>             <InformationContent><p>School</p> <div><p>{studentInfo.School}</p></div></InformationContent>
                     <InformationContent><p>Teacher</p> <div><p>{studentInfo.TeacherName}</p></div></InformationContent>
                     <InformationContent><p>Course</p> <div><p>Beginner</p></div></InformationContent>
                     <InformationContent><p>Date of Birth</p> <div><p>{studentInfo.DateOfBirth.split("T")[0]}</p></div></InformationContent>
