@@ -18,7 +18,6 @@ import { GlobalStyle } from './styles/GlobalStyles';
 
 import Projects from './pages/Projects/Projects';
 
-
 function App() {
   return (
     <>
