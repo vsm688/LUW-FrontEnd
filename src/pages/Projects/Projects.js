@@ -1,8 +1,12 @@
 import React from 'react'
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { PageButton, DisplayPagesGroup, DifficultyGroup, BacktoTopButton, BacktoTopContainer, ButtonContainer, Line, SelectionDiv, DifficultyButton, MainContent, Headercontainer, Container, LeftMenu, RightItems, ProjectPanel, ProjectsContainer } from './Projects.styled';
+import { PageButton, DisplayPagesGroup, DifficultyGroup, 
+    BacktoTopButton, BacktoTopContainer, ButtonContainer, Line, SelectionDiv, DifficultyButton, 
+    MainContent, Headercontainer, Container, LeftMenu, RightItems, ProjectPanel, ProjectsContainer } from './Projects.styled';
 import { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 const Projects = () => {
 
     const [checkBoxState, setCheckBoxState] = useState([
@@ -33,6 +37,11 @@ const Projects = () => {
         ]
     );
     const myRef = useRef(null)
+    let navigate = useNavigate(); 
+    const routeChange = (path) =>{ 
+        
+        navigate("/" + path);
+      }
 
     useEffect(() => {
         console.log("state has changed!")
@@ -125,8 +134,10 @@ const Projects = () => {
                                         (projectData == null ? <p>Sorry, Project data not available</p> :
 
                                             projectData.map((val, idx) => {
+                                                console.log(val.Instructions);
                                                 return (
-                                                    <ProjectPanel key={val.ProjectID + 10000}>
+                                                    
+                                                    <ProjectPanel key={val.ProjectID + 10000} onClick={ () => routeChange(val.Instructions)}>
                                                         {<img src={"/images/Projects/ProjectPagePics/" + val.Name.replaceAll(" ", "") + ".png"}></img>}
                                                         <div>
                                                             <h3 style={{ margin: 0, color: "#6C6C6C" }}>
@@ -135,6 +146,7 @@ const Projects = () => {
                                                             <p style={{ color: "#6C6C6C" }}>BEGINNER | {val.ActivityType}</p>
                                                         </div>
                                                     </ProjectPanel>
+                                                  
                                                 )
                                             }))}</ProjectsContainer>
 

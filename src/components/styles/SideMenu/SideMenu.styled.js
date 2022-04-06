@@ -121,6 +121,13 @@ export const StyledSettingsSVG = styled.div`
         display:none;
     }
 `
+export const MobileStyledSettingsSVG = styled.div`
+    display:flex;
+    flex-direction: column;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+`
 
 export const StyledLink = styled(NavLink)`
     list-style: none ;
