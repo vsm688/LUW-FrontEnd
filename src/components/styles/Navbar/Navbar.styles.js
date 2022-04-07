@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const NavbarContainer = styled.nav`
     width: 100%;
@@ -135,13 +135,6 @@ export const NavbarExtendedContainer = styled.div`
     }
 `;
 
-export const StudentImgContainer = styled.img`
-    width: 20%;
-    height: auto;
-    padding: 0;
-    margin: 0;
-`;
-
 export const ProfileButton = styled.button`
     border: none;
     background-color: #43C0F6;
@@ -162,8 +155,6 @@ export const ProfileExtendedContainer = styled.div`
     position: absolute;
     right: 100px;
     top: 50px;
-    /* padding-left: 1100px; */
-    /* margin-left: 1000px; */
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
 `;

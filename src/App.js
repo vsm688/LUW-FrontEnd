@@ -19,7 +19,6 @@ import { GlobalStyle } from './styles/GlobalStyles';
 import Projects from './pages/Projects/Projects';
 
 import Login from './components/login/loginModal';
-
 import { LoginContext } from './Helper/Context';
 
 function App() {
