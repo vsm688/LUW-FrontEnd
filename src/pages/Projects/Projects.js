@@ -28,14 +28,19 @@ const Projects = () => {
         { id: 16, name: "Music", type: "ActivityType", type: "Subject", checked: false },]);
 
 
+
+
+    const [buttonState, setButtonState ] = useState(
+        [
+            {id:1, color:"#65AFFA", name:"Beginner", textColor: "white"},
+            {id:2, color:"white",name:"Intermediate", textColor: "black"},
+            {id:3, color:"white",name:"Advanced", textColor: "black"},
+        ]
+    )
+
     const [projectData, setProjectData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [DifficultyColor, setDifficultyColor] = useState(
-        [{color: "blue"},
-        { color: "white" },
-        { color: "white" }
-        ]
-    );
+
     const myRef = useRef(null)
     let navigate = useNavigate(); 
     const routeChange = (path) =>{ 
@@ -120,8 +125,29 @@ const Projects = () => {
                                 <ButtonContainer>
 
                                     <DifficultyGroup>
-                                        
-                                        <DifficultyButton style={{ backgroundColor: "#65AFFA", color: "#FFFFFF" }}>Beginner</DifficultyButton><DifficultyButton>Intermediate</DifficultyButton><DifficultyButton>Advanced</DifficultyButton>  </DifficultyGroup>
+                                        {
+                                            buttonState.map((val,idx) =>{
+                                                return(
+                                                    <DifficultyButton id = {idx} style={{background:`${val.color}`, color:`${val.textColor}`}} onClick={
+                                                        (e) =>{
+                                                            setButtonState(buttonState.map( (item,idx) =>{
+                                                                if (item.id == val.id){
+                                                                    item.color = "#65AFFA";
+                                                                    item.textColor = "#FFFFFF";
+                                                                } else{
+                                                                    item.color = "#FFFFFF";
+                                                                    item.textColor = "#000000";
+                                                                }
+                                                                return item;
+                                                            }
+
+                                                            ))
+                                                        }
+                                                    }>{val.name}</DifficultyButton>
+                                                )
+                                            })
+                                        }
+                                       </DifficultyGroup>
                                     <DisplayPagesGroup><div style={{ marginRight: "20px", color: "#6C6C6C" }}>Show</div><PageButton style={{ backgroundColor: "#65AFFA", color: "#FFFFFF" }}>25</PageButton><PageButton>50</PageButton><PageButton>100</PageButton></DisplayPagesGroup>
 
 
