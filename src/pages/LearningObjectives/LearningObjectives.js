@@ -12,6 +12,11 @@ import {
 
 import PurpleBlock from "../../images/purpleblock.png";
 import PurpleBlockChild from "../../images/purpleblockchild.png";
+import PurpleBlockChild2 from "../../images/PurpleChild2.png";
+import BlueBlock from "../../images/BlueBlock.png";
+import BlueChild from "../../images/BlueChild.png";
+import OrangeBlock from "../../images/OrangeBlock.png";
+import OrangeChild from "../../images/OrangeChild.png";
 import SideMenu from "../../components/styles/SideMenu/SideMenu";
 import Header from '../../components/styles/Header/Header';
 import PageLayout from "../../components/styles/PageLayout/PageLayout";
@@ -67,8 +72,10 @@ const LearningObjectives = (props) => {
                 <div id="contDivChild">
                   <p>Look Blocks</p>
                   <div id="imgHolder">
-                    <img src={PurpleBlock} width={"50%"}></img>
-                    <img src={PurpleBlockChild} height ={"20%"}width={"30%"}></img>
+                    <img src={PurpleBlock} height= {"100%"} width={"50%"}></img>
+                    <img src={PurpleBlockChild} height ={"20%"}width={"50%"}></img>
+              
+               
                   </div>
                 </div>
               </div>
@@ -76,8 +83,8 @@ const LearningObjectives = (props) => {
                 <div id="contDivChild">
                   <p>Controls Blocks</p>
                   <div id="imgHolder">
-                    <img src={PurpleBlock} width={"50%"}></img>
-                    <img src={PurpleBlockChild} height ={"20%"}width={"30%"}></img>
+                    <img src={OrangeBlock} height= {"100%"} width={"50%"}></img>
+                    <img src={OrangeChild} height ={"20%"}width={"30%"}></img>
                   </div>
                 </div>
                 
@@ -86,8 +93,8 @@ const LearningObjectives = (props) => {
                 <div id="contDivChild">
                   <p>Motion Blocks</p>
                   <div id="imgHolder">
-                    <img src={PurpleBlock} width={"50%"}></img>
-                    <img src={PurpleBlockChild} height ={"20%"}width={"30%"}></img>
+                    <img src={BlueBlock}  height= {"100%"} width={"50%"}></img>
+                    <img src={BlueChild} height ={"20%"}width={"30%"}></img>
                   </div>
                 </div>
                 

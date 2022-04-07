@@ -29,15 +29,22 @@ export const StyledContentPanel = styled.div`
 
       #contDiv{
           display:flex;
-          height:50%;
+          height:70%;
           margin-left: 50px;
       }
       #contDivChild{
           display:flex;
           flex-direction: column;
+          height: 100%;
       }
       #imgHolder{
           display:flex;
+          height: 100%;
+      }
+      #purpleBlockHolder{
+          display:flex;
+          flex-direction: column;
+          width: 100%;
       }
 
     }

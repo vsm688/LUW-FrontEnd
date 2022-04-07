@@ -88,14 +88,15 @@ const Projects = () => {
                     <MainContent>
 
                         <LeftMenu>
+                         
                             {checkBoxState.map((val, idx) => (
-
-                                <SelectionDiv key={val.id}>
+                           
+                                <SelectionDiv key={val.id + 50}>
                                     {idx === 0 ? <><p>Subscription</p><Line></Line></> : null}
                                     {idx === 2 ? <><p>Activity Type</p><Line></Line></> : null}
                                     {idx === 6 ? <><p>Year Level</p><Line></Line></> : null}
                                     {idx === 10 ? <><p>Subject Matter</p><Line></Line></> : null}
-                                    <div key={val.id} style={{ display: "flex", margin: 0 }}>
+                                    <div key={val.id * 10} style={{ display: "flex", margin: 0 }}>
 
                                         <input style={{ marginRight: "20px" }} checked={val.checked} type="checkbox" key={val.id}
                                             onChange={
@@ -128,7 +129,7 @@ const Projects = () => {
                                         {
                                             buttonState.map((val,idx) =>{
                                                 return(
-                                                    <DifficultyButton id = {idx} style={{background:`${val.color}`, color:`${val.textColor}`}} onClick={
+                                                    <DifficultyButton id = {idx + 20} style={{background:`${val.color}`, color:`${val.textColor}`}} onClick={
                                                         (e) =>{
                                                             setButtonState(buttonState.map( (item,idx) =>{
                                                                 if (item.id == val.id){
