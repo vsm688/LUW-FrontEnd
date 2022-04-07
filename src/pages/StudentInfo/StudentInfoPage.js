@@ -67,7 +67,7 @@ const StudentInfoPage = () => {
               <StudentInfoContainer>
               
                 <StudentInfoDiv>
-
+                  {/* If there is no data then do not try to fill the information using the state, just return blank fields */}
                   {studentInfo === null ? <>   <InformationContent><p>School</p> <div><p></p></div></InformationContent>
                     <InformationContent><p>Teacher</p> <div><p></p></div></InformationContent>
                     <InformationContent><p>Course</p> <div><p>Beginner</p></div></InformationContent>
@@ -86,6 +86,7 @@ const StudentInfoPage = () => {
                 </StudentInfoDiv>
             
               </StudentInfoContainer>
+              {/* Button that calls routeChange which takes you to the projects page */}
               <BackToProjects onClick={routeChange}>Back to Projects</BackToProjects>
               </StudentInfoFlexContainer>
             </StudentMainContentSecondary>

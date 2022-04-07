@@ -88,10 +88,11 @@ const Projects = () => {
                     <MainContent>
 
                         <LeftMenu>
-                         
+                            {/* Map the checkboxes state to actual JSX */}
                             {checkBoxState.map((val, idx) => (
                            
                                 <SelectionDiv key={val.id + 50}>
+                                    {/* Render each field based on index number */}
                                     {idx === 0 ? <><p>Subscription</p><Line></Line></> : null}
                                     {idx === 2 ? <><p>Activity Type</p><Line></Line></> : null}
                                     {idx === 6 ? <><p>Year Level</p><Line></Line></> : null}
@@ -101,7 +102,7 @@ const Projects = () => {
                                         <input style={{ marginRight: "20px" }} checked={val.checked} type="checkbox" key={val.id}
                                             onChange={
                                                 (e) => {
-
+                                                          {/* Update the state of a checkbox once it is checked */}
                                                     setCheckBoxState(checkBoxState.map(item => {
                                                         if (val.id == item.id) {
                                                             item.checked = e.target.checked;
@@ -123,6 +124,7 @@ const Projects = () => {
                         {loading ? <p>Loading</p> :
 
                             <div>
+                                {/* Render buttons for difficulty */}
                                 <ButtonContainer>
 
                                     <DifficultyGroup>
@@ -131,6 +133,7 @@ const Projects = () => {
                                                 return(
                                                     <DifficultyButton id = {idx + 20} style={{background:`${val.color}`, color:`${val.textColor}`}} onClick={
                                                         (e) =>{
+                                                            {/* Change button color state when clicked*/}
                                                             setButtonState(buttonState.map( (item,idx) =>{
                                                                 if (item.id == val.id){
                                                                     item.color = "#65AFFA";
@@ -157,9 +160,10 @@ const Projects = () => {
                                 <ProjectsContainer>
 
                                     {
+                                        
 
                                         (projectData == null ? <p>Sorry, Project data not available</p> :
-
+                                            // Once the project data is returned we want to render each project as a component in react.
                                             projectData.map((val, idx) => {
                                                 console.log(val.Instructions);
                                                 return (

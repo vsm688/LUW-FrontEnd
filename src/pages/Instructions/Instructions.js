@@ -15,7 +15,7 @@ const Instructions = () => {
         <SideMenu></SideMenu>
         <StyledMain>
           <ContentPanelContainer>
-
+      {/* Main div contains image and link to scratch page */}
             <div id="makeProjectContent">
 
               <div id="InnerTextDiv">
@@ -24,7 +24,7 @@ const Instructions = () => {
                   <div className="CenterDivText">
                     <h1>Test</h1>
                     <p>If you haven't used Scratch before, you will need to join Scratch first. </p>
-                    <p>Go to https://scratch.mit.edu. Click on Join Scratch.</p>
+                    <p>Go to <a style = {{textDecoration:"none"}} href='https://scratch.mit.edu' >https://scratch.mit.edu.</a> Click on <span style={{color:"#F91C85"}}>Join Scratch.</span></p>
                   </div>
                 </div>
                 <div id="ProjectBanner" >

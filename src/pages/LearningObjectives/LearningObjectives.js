@@ -66,7 +66,7 @@ const LearningObjectives = (props) => {
               </p>
             </StyledHeaderDiv>
             
-        
+          {/* Main div which has all the images loaded for each code block */}
             <div id="main">
               <div id="contDiv">
                 <div id="contDivChild">
