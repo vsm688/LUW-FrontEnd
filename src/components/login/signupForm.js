@@ -7,12 +7,10 @@ function SigninForm() {
     const [emailReg, setEmailReg] = useState('');
     const [passwordReg, setPasswordReg] = useState('');
 
-    Axios.defaults.withCredentials = true
-
     const register = () => {
-        Axios.post('http://localhost:3001/register', {
+        Axios.post("http://localhost:5000/student/register", {
             name: nameReg,
-            email: emailReg, 
+            email: emailReg,
             password: passwordReg,
         }).then((response) => {
             console.log(response);
@@ -23,22 +21,23 @@ function SigninForm() {
         <>
             <div className='SigninHighlight'></div>
             <div className='loginFormContainer'>
-                <input id='signinForm' type="text" placeholder="  Full Name" 
+                <input className='signinForm' type="text" placeholder="  Full Name" 
                 onChange={(e) => 
                 setNameReg(e.target.value)
                 }
                 /> <br />
-                <input id='signinForm' type="text" placeholder="  Email Address" 
+                <input className='signinForm' type="text" placeholder="  Email Address" 
                 onChange={(e) => 
-                setEmailReg(e.target.value)
-                }
+                    setEmailReg(e.target.value)
+                    }
                 /> <br />
-                <input id='signinForm' type="password" placeholder="  Password" 
+                <input className='signinForm' type="password" placeholder="  Password" 
                 onChange={(e) => 
-                setPasswordReg(e.target.value)
-                }
+                    setPasswordReg(e.target.value)
+                    }
                 /> <br />
-                <input id='signinForm' type="password" placeholder="  Confirm Password"
+                <input className='signinForm' type="password" placeholder="  Confirm Password"
+                
                 /> <br />
 
                 <button id='modalButton' onClick={register}>Sign up</button>

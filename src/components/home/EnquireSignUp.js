@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
     EnquireBackground,
     EnquireContainer,
@@ -15,10 +15,17 @@ import {
 } from './styles/EnquireSignUp.styles';
 import img from '../../images/Home/teacher-4784916_1920.png';
 import { ButtonContainer } from './styles/Carousel.styles';
+import { useNavigate } from 'react-router';
 
 function EnquireSignUp() {
+
+    const navigate = useNavigate();
+
+    const myRef = useRef(null)
+
     return (
         <EnquireBackground>
+            <div ref={myRef}></div>
             <EnquireContainer>
                 <LeftSide>
                     <ImageDiv src={img} />
@@ -31,7 +38,10 @@ function EnquireSignUp() {
                             questions you may have.</EnquireBody>
                         <ButtonContainer>
                             <LearnMoreButton>Enquire Now</LearnMoreButton>
-                            <SignUpButton>Sign Up</SignUpButton>
+                            <SignUpButton onClick={() => {
+                            navigate('/login');
+                        }}
+                        >Sign Up</SignUpButton>
                     </ButtonContainer>
                     </RightInnerContainer>
                 </RightSide>

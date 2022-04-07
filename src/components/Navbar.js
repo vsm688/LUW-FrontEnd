@@ -28,7 +28,7 @@ import Modal from './login/loginModal';
 function Navbar() {
 
     const [extendNavbar, setExtendNavbar] = useState(false);
-    const [openModal, setOpenModal] = useState(false);
+    // const [openModal, setOpenModal] = useState(false);
 
     const [loggedIn, setLoggedIn] = useState(false);
     const [loginStatus, setLoginStatus] = useState('');
@@ -44,7 +44,7 @@ function Navbar() {
         <MiddleContainer>
             <NavbarLinkContainer>
             <NavbarLink to='/' >Home</NavbarLink>
-            <NavbarLink to='/student' >Students</NavbarLink>
+            <NavbarLink to='/features' >Features</NavbarLink>
             <NavbarLink to='/teachers' >Teachers</NavbarLink>
             <OpenLinksButton onClick={() => {
                 setExtendNavbar((curr) => !curr);
@@ -60,20 +60,19 @@ function Navbar() {
                 <LanguageButton src={NZ} ></LanguageButton>
                 <LanguageButton src={tinoRangatiratanga} ></LanguageButton>
             </LangContainer>
-            {!loggedIn ? (
-            <LogInContainer>
-            <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon>
-            <LogInLink to='/login' onClick={() => {
-                            setOpenModal(true);
-                        }}
-                        >Register | Log In</LogInLink>
-            </LogInContainer> 
-            ) : (
+            {loggedIn ? (
                 <LogInContainer>
-                    <LogInLink to='/profile'>
+                    <LogInLink to='/student'>
                         bruce wayne
                     </LogInLink>
                 </LogInContainer>
+            
+            ) : (
+                <LogInContainer>
+            <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon>
+            <LogInLink to='/login' 
+                        >Register | Log In</LogInLink>
+            </LogInContainer> 
             )}
 
         </RightContainer>
@@ -91,7 +90,7 @@ function Navbar() {
             }}>Teachers</NavbarLinkExtended>
         </NavbarExtendedContainer>
         )}
-         {openModal && <Modal closeModal={setOpenModal}/>}
+         {/* {openModal && <Modal closeModal={setOpenModal}/>} */}
         </NavbarContainer>
     );
 }
