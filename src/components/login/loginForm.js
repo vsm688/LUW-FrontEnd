@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+import { LoginContext } from '../../Helper/Context';
+
     function LoginForm() {
+        const { loggedIn, setLoggedIn } = useContext(LoginContext);
 
         // const [name] = useState('');
         const [email, setEmail] = useState('');
@@ -13,16 +16,20 @@ import { useNavigate } from 'react-router-dom';
         const navigate = useNavigate();
 
         const login = () => {
+           
 
             Axios.post("http://localhost:5000/student/login", {
+
                 email: email,
                 password: password,
             }).then((response) => {
+                // setLoggedIn(true);
                 if (response.data.loggedIn) {
+                    setLoggedIn(true);
                     localStorage.setItem("loggedIn", true);
                     localStorage.setItem("email", response.data.email);
                     console.log(response);
-                    navigate("/student");
+                    navigate("/student")
                 } else {
                     setErrorMessage(response.data.message);
                 }

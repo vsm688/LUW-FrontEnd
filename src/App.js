@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -20,13 +20,17 @@ import Projects from './pages/Projects/Projects';
 
 import Login from './components/login/loginModal';
 
+import { LoginContext } from './Helper/Context';
 
 function App() {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <>
       <GlobalStyle />
       <Router>
-       
+       <LoginContext.Provider value={{loggedIn, setLoggedIn}}>
         <Routes>
 
           <Route path='/' element={<Home />} />
@@ -45,7 +49,7 @@ function App() {
           <Route path='/features' element={<Features />} />
 
         </Routes>
-    
+        </LoginContext.Provider>
       </Router>
     </>
   );
