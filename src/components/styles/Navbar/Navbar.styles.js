@@ -134,3 +134,53 @@ export const NavbarExtendedContainer = styled.div`
         display: none;
     }
 `;
+
+export const StudentImgContainer = styled.img`
+    width: 20%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+`;
+
+export const ProfileButton = styled.button`
+    border: none;
+    background-color: #43C0F6;
+    white-space: nowrap;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0px;
+`;
+
+export const ProfileExtendedContainer = styled.div`
+    width: 100px;
+    display: flex;
+    background-color: #FDF7D3;
+    flex-direction: column;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+    /* padding-left: 1100px; */
+    /* margin-left: 1000px; */
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+`;
+
+export const ProfileLinkExtended = styled(Link)`
+    color: #707070;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 15px;
+`;
+
+export const UserContainer = styled.div`
+    color: white;
+    padding-top: 2px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+`;

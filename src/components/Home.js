@@ -8,13 +8,13 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 function Home() {
 
-useEffect(() => {
-        console.log(localStorage);
-        if (!localStorage.getItem("loggedIn")) {
-            localStorage.setItem("loggedIn", false)
-        }
-    }
-    )
+// useEffect(() => {
+//         console.log(localStorage);
+//         if (!localStorage.getItem("loggedIn")) {
+//             localStorage.setItem("loggedIn", false)
+//         }
+//     }
+//     )
 
     return(
         <>
