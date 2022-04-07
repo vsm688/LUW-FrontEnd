@@ -1,11 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Axios from 'axios';
 import './loginModal.css';
 import Students from './images/Students.png';
 import Teachers from './images/teacher.png';
 import LoginForm from './loginForm';
 import SigninForm from './signupForm';
-
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 
@@ -27,6 +25,7 @@ useEffect(() => {
         <div className='modalBackground'>
         <div className='modalContainer'>
             <div className='modalMainContainer'>
+                {/* ----------------- student signup / login side with opposite useState switches --------------- */}
                 <div className='leftContainer'>
                     <div className='imageContainer'>
                         <img id='studentImage' src={Students}></img>
@@ -51,6 +50,7 @@ useEffect(() => {
                         {openSignin && <SigninForm />}
                     </div>
                 </div>
+                {/* ----------------- teacher signup / login side with opposite useState switches --------------- */}
                 <div className='rightContainer'>
 
                     {/* <div className='closeButton'>

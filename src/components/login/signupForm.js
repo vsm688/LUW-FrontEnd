@@ -21,22 +21,22 @@ function SigninForm() {
         <>
             <div className='SigninHighlight'></div>
             <div className='loginFormContainer'>
-                <input className='signinForm' type="text" placeholder="  Full Name" 
+                <input className='signinForm' type="text" placeholder=" Full Name" 
                 onChange={(e) => 
                 setNameReg(e.target.value)
                 }
                 /> <br />
-                <input className='signinForm' type="text" placeholder="  Email Address" 
+                <input className='signinForm' type="text" placeholder=" Email Address" 
                 onChange={(e) => 
                     setEmailReg(e.target.value)
                     }
                 /> <br />
-                <input className='signinForm' type="password" placeholder="  Password" 
+                <input className='signinForm' type="password" placeholder=" Password" 
                 onChange={(e) => 
                     setPasswordReg(e.target.value)
                     }
                 /> <br />
-                <input className='signinForm' type="password" placeholder="  Confirm Password"
+                <input className='signinForm' type="password" placeholder=" Confirm Password"
                 
                 /> <br />
 

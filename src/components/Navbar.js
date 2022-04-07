@@ -17,7 +17,6 @@ import {
     LanguageButton,
     LangContainer,
     LogInContainer,
-    StudentImgContainer,
     ProfileButton,
     ProfileExtendedContainer,
     ProfileLinkExtended,
@@ -26,19 +25,13 @@ import {
 import LogoImg from '../images/Home/Star Logo 07-2.png';
 import NZ from '../images/Home/NZ Flag.png';
 import tinoRangatiratanga from '../images/Home/Maori flag.png';
-import Modal from './login/loginModal';
-
 import { LoginContext } from '../Helper/Context';
-
 
 
 function Navbar() {
 
     const [extendNavbar, setExtendNavbar] = useState(false);
     const [extendProfile, setExtendProfile] = useState(false);
-    // const [openModal, setOpenModal] = useState(false);
-
-    // const [loggedIn, setLoggedIn] = useState(false);
 
     const { loggedIn, setLoggedIn } = useContext(LoginContext);
 
@@ -66,17 +59,15 @@ function Navbar() {
 
     useEffect(() => {
         const response = fetchStudent();
-    
     }, []);
     
-
-
-
     return (
     <NavbarContainer extendNavbar={extendNavbar}>
         <NavbarInnerContainer>
         <LeftContainer>
+            <a href="/" >
             <Logo src={LogoImg}></Logo>
+            </a>
         </LeftContainer>
         <MiddleContainer>
             <NavbarLinkContainer>
@@ -97,6 +88,8 @@ function Navbar() {
                 <LanguageButton src={NZ} ></LanguageButton>
                 <LanguageButton src={tinoRangatiratanga} ></LanguageButton>
             </LangContainer>
+
+             {/*------------------ Login / User details ternary operator ----------------*/}
             {loggedIn ? (
                 <UserContainer>
               <img src={"/images/" + studentInfo.StudentID +".png"} style={{ width: "25px" }}></img>
@@ -111,12 +104,14 @@ function Navbar() {
                 <LogInContainer>
             <FontAwesomeIcon icon={faUserCircle}></FontAwesomeIcon>
             <LogInLink to='/login' 
-                        >Register | Log In</LogInLink>
+                        > Register | Log In</LogInLink>
             </LogInContainer> 
             )}
 
         </RightContainer>
         </NavbarInnerContainer>
+
+         {/*------------------ Nav hamburger conditional rendering drop down extender ----------------*/}
         {extendNavbar && (
         <NavbarExtendedContainer>
             <NavbarLinkExtended to='/' onClick={() => {
@@ -130,6 +125,8 @@ function Navbar() {
             }}>Teachers</NavbarLinkExtended>
         </NavbarExtendedContainer>
         )}
+
+        {/*-------------------- Profile conditional rendering drop down extender --------------------*/}
         {extendProfile && (
         <ProfileExtendedContainer>
             <ProfileLinkExtended to='/student' onClick={() => {
@@ -138,12 +135,11 @@ function Navbar() {
             <ProfileLinkExtended to='/settings' onClick={() => {
                 setExtendProfile((curr) => !curr);
             }}>Settings</ProfileLinkExtended>
-            <ProfileLinkExtended to='/teachers' onClick={() => {
+            <ProfileLinkExtended to='/' onClick={() => {
                 setExtendProfile((curr) => !curr);
             }}>Log Out</ProfileLinkExtended>
         </ProfileExtendedContainer>
         )}
-         {/* {openModal && <Modal closeModal={setOpenModal}/>} */}
         </NavbarContainer>
     );
 }
