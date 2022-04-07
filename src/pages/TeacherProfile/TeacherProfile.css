@@ -1,0 +1,49 @@
+.middlebody {
+    background-color: #EEEEEE 0% 0% no-repeat padding-box;
+    width: 100%;
+    border: 1px solid #EEEEEE;
+    display: flex;
+    
+    
+}
+
+.left {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    width: 200px;
+    height: 500px;
+    margin-top: 100px;
+    margin-left: 300px;
+    
+    
+}
+
+
+img {
+    
+    width: 175px;
+    height: 175px;
+}
+
+.set {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 5px #00000029;
+    border: 2px solid #43C0F6;
+    border-radius: 7px;
+    opacity: 1;
+}
+/*
+h2 {
+    margin-top: 100px;
+    margin-left: 400px;
+   
+}
+*/
+.right {
+    
+    margin-top: 150px;
+    margin-left: 300px;
+    
+    
+}
+
+
