@@ -12,10 +12,14 @@ SignButton,
 Span,
 } from './styles/Hero.styles';
 import Modal from '../login/loginModal';
+import { useNavigate } from 'react-router';
+
 
 function Hero() {
 
     const [openModal, setOpenModal] = useState(false);
+
+    const navigate = useNavigate();
 
     return (
         <HeroBackground>
@@ -30,8 +34,11 @@ function Hero() {
                     <HeroButtons>
                         <LearnButton>Learn more</LearnButton>
                         <SignButton onClick={() => {
-                            setOpenModal(true);
+                            navigate('/login');
                         }}
+                        // onClick={() => {
+                        //     setOpenModal(true);
+                        // }}
                         >Sign up</SignButton>
                     </HeroButtons>
                 </LeftSide>

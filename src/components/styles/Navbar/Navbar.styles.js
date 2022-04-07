@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 export const NavbarContainer = styled.nav`
     width: 100%;
@@ -76,7 +76,7 @@ export const NavbarLink = styled(Link)`
     }
 `;
 
-export const LogInLink = styled.button`
+export const LogInLink = styled(Link)`
     border: none;
     background-color: #43C0F6;
     white-space: nowrap;
