@@ -1,0 +1,151 @@
+.App {
+    text-align: center;
+}
+
+.modalBackground {
+    width: 100%;
+    height: 700px;
+    /* background-color: rgba(255,255,255,0.5); */
+    background-color: #eaeaea;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContainer {
+    margin: 20px;
+    width: 600px;
+    height: 600px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.closeButton {
+    position: fixed;
+    padding-left: 220px;
+}
+
+.modalMainContainer {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftContainer {
+    flex: 50%;
+    border-style: solid;
+    border-color: #707070;
+    border-width: 0px 1px 0px 0px;
+    justify-content: center;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+#studentImage {
+    width: 180px;
+    height: auto;
+}
+
+.ModalHeader {
+    display: flex;
+    justify-content: center;
+    font-family: Nunito;
+    font-size: .9rem;
+    color: #707070;
+
+}
+
+.rightContainer {
+    flex: 50%;
+    border-style: solid;
+    border-color: #707070;
+    border-width: 0px 0px 0px 1px;
+}
+
+#teacherImage {
+    width: 180px;
+    height: auto;
+}
+
+.switchContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#loginButton {
+    margin: 5px;
+    border: none;
+    background-color: white;
+    font-family: Open sans;
+    color: #707070
+}
+
+#signupButton {
+    margin: 5px;
+    border: none;
+    background-color: white;
+    font-family: Open sans;
+    color: #707070
+}
+
+.loginFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    
+}
+
+.loginForm {
+    border-radius: 6px;
+    padding: 4px 0px;
+    margin: 5px 60px;
+}
+
+#modalButton {
+    padding: 5px 10px;
+    margin: 0px 90px;
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #F91C85;
+    border-radius: 8px;
+    border-width: 2px;
+    color: white;
+    border-color: hotpink;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+
+.signinForm {
+    border-radius: 6px;
+    padding: 4px 0px;
+    margin: 0px 60px;
+}
+
+.SigninHighlight {
+    width: 22%;
+    height: 4px;
+    position: relative;
+    top: -14px;
+    left: 150px;
+    background-color: #F91C85
+}
+
+.LoginHighlight {
+    width: 18%;
+    height: 4px;
+    position: relative;
+    top: -14px;
+    left: 85px;
+    background-color: #43C0F6
+}
